@@ -1,0 +1,48 @@
+<n3>Mes reservation</n3>
+<hr>
+<div class="row">
+  <div class="col-sm-7">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+
+        <th scope="col">DATE</th>
+        <th scope="col">BIEN</th>
+        <th scope="col">action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>
+          <a [routerLink]="['/reservations',1]" CLASS="btn btn-sm btn-outline-info mr-2">Detail</a>
+          <a [routerLink]="['/reservations',1,'edit']" CLASS="btn btn-sm btn-outline-danger">Edite</a>
+        </td>
+      </tr>
+      <tr>
+
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>
+          <a [routerLink]="['/reservations',2]" CLASS="btn btn-sm btn-outline-info mr-2">Detail</a>
+          <a [routerLink]="['/reservations',2,'edit']" CLASS="btn btn-sm btn-outline-danger">Edite</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Larry the Bird</td>
+        <td>@twitter</td>
+        <td>
+          <a [routerLink]="['/reservations',3]" CLASS="btn btn-sm btn-outline-info mr-2">Detail</a>
+          <a [routerLink]="['/reservations',3,'edit']" CLASS="btn btn-sm btn-outline-danger">Edite</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
