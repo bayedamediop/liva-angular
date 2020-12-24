@@ -1,27 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item" >
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/']" >Acceuil
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item" >
-        <a class="nav-link" [routerLink]="['/reservations']" >Reservation
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/reservations']" >Rservation
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['']">Mes Reservation</a>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['/']">Mes Reservation</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/biens/add']">Nouveau Bien</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" href="/">A Propos</a>
       </li>
       <li class="nav-item dropdown">
@@ -36,8 +36,8 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-<!--      //<input [(ngModel)]="search" (input)="searchThis()"-->
-             name="search" class="form-control mr-sm-2" type="text" placeholder="Search">
+      <input type="text" class="m-3 h-400 w-115" name="search" [(ngModel)]="search" (keyup)="newMessage(search)" placeholder="Recherger un bien">
+
     </form>
   </div>
 </nav>
